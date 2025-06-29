@@ -106,10 +106,16 @@ const HeroSection = () => {
         {/* Left Content */}
         <div className="flex-1 flex flex-col items-start text-left">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 animate-fade-in animation-delay-500 leading-tight">
-            <span className="bg-gradient-to-r from-blue-300 via-purple-400 to-blue-700 bg-clip-text text-transparent" >
-              Nadeera</span>
+            <span
+              className="bg-gradient-to-r from-blue-900 via-blue-600 to-blue-300 bg-clip-text text-transparent dark:from-blue-300 dark:via-purple-400 dark:to-blue-700"
+            >
+              Nadeera
+            </span>
             <br />
-            <span className="bg-gradient-to-r from-blue-300 via-purple-400 to-blue-700 bg-clip-text text-transparent" style={{ display: "inline-block", marginLeft: "4cm" }}>
+            <span
+              className="bg-gradient-to-r from-blue-900 via-blue-600 to-blue-300 bg-clip-text text-transparent dark:from-blue-300 dark:via-purple-400 dark:to-blue-700"
+              style={{ display: "inline-block", marginLeft: "4cm" }}
+            >
               Withana
             </span>
           </h1>
@@ -163,7 +169,7 @@ const HeroSection = () => {
         </a>
         <button
           onClick={() => window.location.href = "mailto:nadeerawithana2k20@gmail.com"}
-          className="px-8 py-3 border border-gray-600 text-gray-900 rounded-full font-semibold hover:bg-white dark:text-gray-100 dark:border-gray-400 dark:hover:bg-slate-800 transition-all duration-300"
+          className="px-8 py-3 border border-gray-600 text-gray-900 rounded-full font-semibold hover:bg-white hover:text-black dark:text-gray-100 dark:border-gray-400 dark:hover:bg-slate-800 transition-all duration-300"
         >
           Contact Me
         </button>
@@ -193,7 +199,12 @@ const HeroSection = () => {
           <Facebook className="text-white" size={28} />
         </a>
       </div>
-    </section>
+
+
+
+
+
+export default HeroSection;};  );    </section>    </section>
   );
 };
 
