@@ -88,7 +88,8 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-[#0a192f]">
+
       <CursorDots />
 
       {/* Animated Background */}
@@ -146,7 +147,11 @@ const HeroSection = () => {
       </div>
 
       {/* Centered Buttons */}
-      <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 z-10 flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in animation-delay-2000">
+      <div
+  className="absolute bottom-20 transform z-10 flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in animation-delay-2000"
+  style={{ left: 'calc(50% - 4cm)', transform: 'translateX(-50%)' }}
+>
+
         <a
           href="/MY CV.pdf"
           download
