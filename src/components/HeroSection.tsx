@@ -90,7 +90,7 @@ const HeroSection = () => {
     <section
       id="home"
       className={`min-h-screen flex items-center justify-center relative overflow-hidden transition-colors duration-500 ${
-        darkMode ? 'bg-slate-900 text-gray-100' : 'bg-white text-gray-900'
+        darkMode ? 'bg-slate-900 text-gray' : 'bg-white text-gray-900'
       }`}
     >
       <CursorDots />
@@ -114,7 +114,7 @@ const HeroSection = () => {
         <div className="flex-1 flex flex-col items-start text-left">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 animate-fade-in animation-delay-500 leading-tight">
             <span>Nadeera</span><br />
-            <span className="bg-gradient-to-r from-blue-500 to-indigo-600 bg-clip-text text-transparent inline-block ml-16">
+            <span className="bg-gradient-to-r from-purple-500 to-indigo-600 bg-clip-text text-transparent inline-block ml-16">
               Withana
             </span>
           </h1>
@@ -160,7 +160,7 @@ const HeroSection = () => {
           href="/MY CV.pdf"
           download
           className="px-6 py-3 rounded-full font-semibold transition duration-300
-            bg-blue-600 text-white hover:bg-blue-700"
+            bg-blue-500 text-white hover:bg-blue-700"
         >
           Download CV
         </a>
