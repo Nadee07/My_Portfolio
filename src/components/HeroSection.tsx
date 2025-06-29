@@ -106,10 +106,10 @@ const HeroSection = () => {
         {/* Left Content */}
         <div className="flex-1 flex flex-col items-start text-left">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 animate-fade-in animation-delay-500 leading-tight">
-            <span className="bg-gradient-to-r from-blue-300 via-blue-500 to-blue-700 bg-clip-text text-transparent" >
+            <span className="bg-gradient-to-r from-blue-300 via-purple-400 to-blue-700 bg-clip-text text-transparent" >
               Nadeera</span>
             <br />
-            <span className="bg-gradient-to-r from-blue-300 via-blue-500 to-blue-700 bg-clip-text text-transparent" style={{ display: "inline-block", marginLeft: "4cm" }}>
+            <span className="bg-gradient-to-r from-blue-300 via-purple-400 to-blue-700 bg-clip-text text-transparent" style={{ display: "inline-block", marginLeft: "4cm" }}>
               Withana
             </span>
           </h1>
@@ -157,7 +157,7 @@ const HeroSection = () => {
         <a
           href="/MY CV.pdf"
           download
-          className="px-8 py-3 bg-blue-600 text-white rounded-full font-semibold hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105"
+          className="px-8 py-3 bg-black text-white dark:bg-white dark:text-black rounded-full font-semibold hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105"
         >
           Download CV
         </a>
