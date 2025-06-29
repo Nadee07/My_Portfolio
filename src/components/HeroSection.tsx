@@ -107,9 +107,12 @@ const HeroSection = () => {
         {/* Left: Name and Info */}
         <div className="flex-1 flex flex-col items-start text-left">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 animate-fade-in animation-delay-500 leading-tight">
-            <span> Nadeera </span>
+            <span>Nadeera</span>
             <br />
-            <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-purple-400 bg-clip-text text-transparent">
+            <span
+              className="bg-gradient-to-r from-purple-400 via-pink-500 to-purple-400 bg-clip-text text-transparent"
+              style={{ display: "inline-block", marginLeft: "4cm" }}
+            >
               Withana
             </span>
           </h1>
@@ -151,18 +154,18 @@ const HeroSection = () => {
                 Download CV
               </a>
             </button>
-            <button 
-              onClick={scrollToAbout}
+            <button
+              onClick={() => window.location.href = "mailto:nadeerawithana2k20@gmail.com"}
               className="px-8 py-3 border border-gray-600 text-white rounded-full font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
             >
-              Learn More
+              Contact Me
             </button>
           </div>
         </div>
 
         {/* Right: Profile Picture */}
         <div className="flex-1 flex justify-center items-center mt-12 md:mt-0">
-          <div className="w-48 h-48 rounded-full bg-gradient-to-r from-purple-400 to-cyan-400 p-1">
+          <div className="w-72 h-72 rounded-full bg-gradient-to-r from-purple-400 to-cyan-400 p-1 shadow-2xl">
             <img
               src="/Nadiii.jpeg"
               alt="Profile"
