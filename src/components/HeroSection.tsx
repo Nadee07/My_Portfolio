@@ -103,12 +103,12 @@ const HeroSection = () => {
       {/* Hero Content */}
       <div className="container mx-auto px-4 z-10 relative flex flex-col md:flex-row items-center justify-between">
         <div className="flex-1 flex flex-col items-start text-left">
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-4">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-4 animate-fade-in animation-delay-500 leading-tight mt-[3cm]">
             Nadeera <br />
             <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-purple-400 bg-clip-text text-transparent ml-16 inline-block">Withana</span>
           </h1>
 
-          <h2 className="text-xl md:text-3xl mb-8 font-semibold">
+          <h2 className="text-xl md:text-2xl lg:text-3xl text-gray-700 dark:text-gray-200 font-semibold mt-[4cm] mb-8">
             <Typewriter
               words={['Aspiring Data Engineer', 'Data Analyst', 'IT Undergraduate at SLIIT', 'Web Developer']}
               loop={0}
