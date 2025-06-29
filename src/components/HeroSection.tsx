@@ -102,9 +102,67 @@ const HeroSection = () => {
         <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
       </div>
 
-      <div className="container mx-auto px-4 text-center relative z-10">
-        <div className="mb-8 animate-fade-in">
-          <div className="w-48 h-48 mx-auto rounded-full bg-gradient-to-r from-purple-400 to-cyan-400 p-1 mb-6">
+      {/* Main Content: Name left, Profile pic right */}
+      <div className="container mx-auto px-4 relative z-10 flex flex-col md:flex-row items-center justify-between">
+        {/* Left: Name and Info */}
+        <div className="flex-1 flex flex-col items-start text-left">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 animate-fade-in animation-delay-500 leading-tight">
+            <span> Nadeera </span>
+            <br />
+            <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-purple-400 bg-clip-text text-transparent">
+              Withana
+            </span>
+          </h1>
+
+          <motion.h2
+            className="text-xl md:text-2xl lg:text-3xl text-black-300 mb-8"
+            initial={{ x: -100, opacity: 0 }}
+            animate={{ x: 60, opacity: [1, 0, 1] }}
+            transition={{
+              x: {
+                duration: 1.5,
+                repeat: Infinity,
+                repeatType: "reverse",
+                ease: "easeInOut"
+              },
+              opacity: {
+                duration: 1.0,
+                repeat: Infinity,
+                repeatType: "reverse",
+                ease: "easeInOut"
+              }
+            }}
+          >
+            Aspiring Data Engineer | Data Analyst| IT Undergraduate at SLIIT | Web Developer
+          </motion.h2>
+
+          <p className="text-lg text-dark bg-gray-500-400 mb-12 max-w-2xl animate-fade-in animation-delay-1500">
+            Passionate about transforming data into actionable insights and building intelligent solutions 
+            that make a difference in the world.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 animate-fade-in animation-delay-2000">
+            <button className="px-8 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 text-white rounded-full font-semibold hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 transform hover:scale-105">
+              <a
+                href="/MY CV.pdf"
+                download
+                className="btn btn-primary"
+              >
+                Download CV
+              </a>
+            </button>
+            <button 
+              onClick={scrollToAbout}
+              className="px-8 py-3 border border-gray-600 text-white rounded-full font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
+            >
+              Learn More
+            </button>
+          </div>
+        </div>
+
+        {/* Right: Profile Picture */}
+        <div className="flex-1 flex justify-center items-center mt-12 md:mt-0">
+          <div className="w-48 h-48 rounded-full bg-gradient-to-r from-purple-400 to-cyan-400 p-1">
             <img
               src="/Nadiii.jpeg"
               alt="Profile"
@@ -112,65 +170,14 @@ const HeroSection = () => {
             />
           </div>
         </div>
+      </div>
 
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 animate-fade-in animation-delay-500">
-          <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-purple-400 bg-clip-text text-transparent">
-            Nadeera Withana
-          </span>
-        </h1>
-
-        <motion.h2
-          className="text-xl md:text-2xl lg:text-3xl text-black-300 mb-8"
-          initial={{ x: -100, opacity: 0 }}
-          animate={{ x: 60, opacity: [1, 0, 1] }}
-          transition={{
-            x: {
-              duration: 1.5,
-              repeat: Infinity,
-              repeatType: "reverse",
-              ease: "easeInOut"
-            },
-            opacity: {
-              duration: 1.0,
-              repeat: Infinity,
-              repeatType: "reverse",
-              ease: "easeInOut"
-            }
-          }}
-        >
-          Aspiring Data Engineer | Data Analyst| IT Undergraduate at SLIIT | Web Developer
-        </motion.h2>
-
-        <p className="text-lg text-dark bg-gray-500-400 mb-12 max-w-2xl mx-auto animate-fade-in animation-delay-1500">
-          Passionate about transforming data into actionable insights and building intelligent solutions 
-          that make a difference in the world.
-        </p>
-
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in animation-delay-2000">
-          <button className="px-8 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 text-white rounded-full font-semibold hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 transform hover:scale-105">
-            <a
-              href="/MY CV.pdf"
-              download
-              className="btn btn-primary"
-            >
-              Download CV
-            </a>
-          </button>
-          <button 
-            onClick={scrollToAbout}
-            className="px-8 py-3 border border-gray-600 text-white rounded-full font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
-          >
-            Learn More
-          </button>
-        </div>
-
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <ArrowDown 
-            className="text-gray-400 cursor-pointer hover:text-white transition-colors duration-200"
-            size={24}
-            onClick={scrollToAbout}
-          />
-        </div>
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <ArrowDown 
+          className="text-gray-400 cursor-pointer hover:text-white transition-colors duration-200"
+          size={24}
+          onClick={scrollToAbout}
+        />
       </div>
 
       {/* Social Media Links */}
