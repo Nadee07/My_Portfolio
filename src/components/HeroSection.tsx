@@ -1,5 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { ArrowDown } from 'lucide-react';
+import { Typewriter } from 'react-simple-typewriter';
+// Note: Ensure you have installed 'react-simple-typewriter' package
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Instagram, Facebook } from 'lucide-react';
 
@@ -117,27 +119,25 @@ const HeroSection = () => {
             </span>
           </h1>
 
-          <motion.h2
-            className="text-xl md:text-2xl lg:text-3xl text-black-300 mb-8"
-            initial={{ x: -100, opacity: 0 }}
-            animate={{ x: 60, opacity: [1, 0, 1] }}
-            transition={{
-              x: {
-                duration: 1.5,
-                repeat: Infinity,
-                repeatType: "reverse",
-                ease: "easeInOut"
-              },
-              opacity: {
-                duration: 1.0,
-                repeat: Infinity,
-                repeatType: "reverse",
-                ease: "easeInOut"
-              }
-            }}
-          >
-            Aspiring Data Engineer | Data Analyst| IT Undergraduate at SLIIT | Web Developer
-          </motion.h2>
+          
+
+<h2 className="text-xl md:text-2xl lg:text-3xl text-gray-200 mb-8 font-semibold">
+  <Typewriter
+    words={[
+      'Aspiring Data Engineer',
+      'Data Analyst',
+      'IT Undergraduate at SLIIT',
+      'Web Developer'
+    ]}
+    loop={0} // 0 = Infinite
+    cursor
+    cursorStyle="|"
+    typeSpeed={50}
+    deleteSpeed={40}
+    delaySpeed={1500}
+  />
+</h2>
+
 
           <p className="text-lg text-dark bg-gray-500-400 mb-12 max-w-2xl animate-fade-in animation-delay-1500">
             Passionate about transforming data into actionable insights and building intelligent solutions 
