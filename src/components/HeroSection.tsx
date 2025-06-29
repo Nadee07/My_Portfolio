@@ -199,12 +199,7 @@ const HeroSection = () => {
           <Facebook className="text-white" size={28} />
         </a>
       </div>
-
-
-
-
-
-export default HeroSection;};  );    </section>    </section>
+    </section>
   );
 };
 
