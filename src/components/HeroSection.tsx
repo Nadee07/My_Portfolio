@@ -120,7 +120,7 @@ const HeroSection = () => {
             />
           </h2>
 
-          <p className="text-lg mb-8 max-w-2xl">
+          <p className="text-lg text-gray-700 dark:text-gray-300 mt-[6cm] mb-12 max-w-2xl">
             Passionate about transforming data into actionable insights and building intelligent solutions.
             Actively seeking an internship to apply my skills and gain hands-on industry experience.
           </p>
