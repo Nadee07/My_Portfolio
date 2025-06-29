@@ -102,7 +102,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 relative z-10 flex flex-col md:flex-row items-center justify-between">
         {/* Left Content */}
         <div className="flex-1 flex flex-col items-start text-left">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 animate-fade-in animation-delay-500 leading-tight">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray mb-4 animate-fade-in animation-delay-500 leading-tight">
             <span>Nadeera</span>
             <br />
             <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-purple-400 bg-clip-text text-transparent" style={{ display: "inline-block", marginLeft: "4cm" }}>
@@ -110,7 +110,7 @@ const HeroSection = () => {
             </span>
           </h1>
 
-          <h2 className="text-xl md:text-2xl lg:text-3xl text-gray-200 mb-8 font-semibold">
+          <h2 className="text-xl md:text-2xl lg:text-3xl text-gray mb-8 font-semibold">
             <Typewriter
               words={[
                 'Aspiring Data Engineer',
