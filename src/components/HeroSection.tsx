@@ -98,7 +98,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 z-0">
         <div className="absolute top-20 left-10 w-72 h-72 bg-gray-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
         <div className="absolute top-40 right-10 w-72 h-72 bg-gray-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
-        <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
+        <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-gray-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
       </div>
 
       {/* Main Content */}
@@ -106,9 +106,10 @@ const HeroSection = () => {
         {/* Left Content */}
         <div className="flex-1 flex flex-col items-start text-left">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 animate-fade-in animation-delay-500 leading-tight">
-            <span>Nadeera</span>
+            <span className="bg-gradient-to-r from-blue-300 via-blue-500 to-blue-700 bg-clip-text text-transparent" >
+              Nadeera</span>
             <br />
-            <span className="bg-gradient-to-r from-purple-500 via-blue-700 to-purple-400 bg-clip-text text-transparent" style={{ display: "inline-block", marginLeft: "4cm" }}>
+            <span className="bg-gradient-to-r from-blue-300 via-blue-500 to-blue-700 bg-clip-text text-transparent" style={{ display: "inline-block", marginLeft: "4cm" }}>
               Withana
             </span>
           </h1>
@@ -130,7 +131,7 @@ const HeroSection = () => {
             />
           </h2>
 
-          <p className="text-lg bg-gray-100 dark:bg-slate-800 mb-12 max-w-2xl animate-fade-in animation-delay-1500">
+          <p className="text-lg bg-white dark:bg-slate-900 mb-12 max-w-2xl animate-fade-in animation-delay-1500">
             Passionate about transforming data into actionable insights and building intelligent solutions
             that make a difference in the world. Actively seeking an internship to apply my skills and gain hands-on industry experience.
           </p>
