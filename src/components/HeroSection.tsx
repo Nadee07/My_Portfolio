@@ -88,7 +88,10 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section
+      id="home"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-white text-gray-900 dark:bg-slate-900 dark:text-gray-100"
+    >
       <CursorDots />
 
       {/* Animated Background */}
@@ -102,15 +105,15 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 relative z-10 flex flex-col md:flex-row items-center justify-between">
         {/* Left Content */}
         <div className="flex-1 flex flex-col items-start text-left">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray mb-4 animate-fade-in animation-delay-500 leading-tight">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 animate-fade-in animation-delay-500 leading-tight">
             <span>Nadeera</span>
             <br />
-            <span className="bg-gradient-to-r from-purple-500 via-cyan-600 to-purple-400 bg-clip-text text-transparent" style={{ display: "inline-block", marginLeft: "4cm" }}>
+            <span className="bg-gradient-to-r from-purple-500 via-blue-700 to-purple-400 bg-clip-text text-transparent" style={{ display: "inline-block", marginLeft: "4cm" }}>
               Withana
             </span>
           </h1>
 
-          <h2 className="text-xl md:text-2xl lg:text-3xl text-gray mb-8 font-semibold">
+          <h2 className="text-xl md:text-2xl lg:text-3xl mb-8 font-semibold">
             <Typewriter
               words={[
                 'Aspiring Data Engineer',
@@ -127,7 +130,7 @@ const HeroSection = () => {
             />
           </h2>
 
-          <p className="text-lg text-dark bg-gray-500-400 mb-12 max-w-2xl animate-fade-in animation-delay-1500">
+          <p className="text-lg bg-gray-100 dark:bg-slate-800 mb-12 max-w-2xl animate-fade-in animation-delay-1500">
             Passionate about transforming data into actionable insights and building intelligent solutions
             that make a difference in the world. Actively seeking an internship to apply my skills and gain hands-on industry experience.
           </p>
@@ -146,21 +149,20 @@ const HeroSection = () => {
       </div>
 
       {/* Centered Buttons */}
-     <div
-  className="absolute bottom-20 transform z-10 flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in animation-delay-2000"
-  style={{ left: 'calc(50% - 4cm)', transform: 'translateX(-50%)' }}
->
-
+      <div
+        className="absolute bottom-20 transform z-10 flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in animation-delay-2000"
+        style={{ left: 'calc(50% - 4cm)', transform: 'translateX(-50%)' }}
+      >
         <a
           href="/MY CV.pdf"
           download
-          className="px-8 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 text-white rounded-full font-semibold hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 transform hover:scale-105"
+          className="px-8 py-3 bg-blue-600 text-white rounded-full font-semibold hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105"
         >
           Download CV
         </a>
         <button
           onClick={() => window.location.href = "mailto:nadeerawithana2k20@gmail.com"}
-          className="px-8 py-3 border border-gray-600 text-black rounded-full font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
+          className="px-8 py-3 border border-gray-600 text-gray-900 rounded-full font-semibold hover:bg-white dark:text-gray-100 dark:border-gray-400 dark:hover:bg-slate-800 transition-all duration-300"
         >
           Contact Me
         </button>
@@ -169,7 +171,7 @@ const HeroSection = () => {
       {/* Arrow Scroll Down */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <ArrowDown
-          className="text-gray-400 cursor-pointer hover:text-white transition-colors duration-200"
+          className="text-gray-400 cursor-pointer hover:text-blue-600 dark:hover:text-white transition-colors duration-200"
           size={24}
           onClick={scrollToAbout}
         />
