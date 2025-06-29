@@ -138,7 +138,7 @@ const HeroSection = () => {
             }
           }}
         >
-          Aspiring Data Engineer | IT Undergraduate at SLIIT | Web Developer
+          Aspiring Data Engineer | Data Analyst| IT Undergraduate at SLIIT | Web Developer
         </motion.h2>
 
         <p className="text-lg text-dark bg-gray-500-400 mb-12 max-w-2xl mx-auto animate-fade-in animation-delay-1500">
