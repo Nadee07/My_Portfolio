@@ -1,9 +1,7 @@
 import React, { useEffect, useRef } from 'react';
-import { ArrowDown } from 'lucide-react';
+import { ArrowDown, Github, Linkedin, Instagram, Facebook } from 'lucide-react';
 import { Typewriter } from 'react-simple-typewriter';
-// Note: Ensure you have installed 'react-simple-typewriter' package
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Instagram, Facebook } from 'lucide-react';
 
 const CursorDots: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -32,7 +30,6 @@ const CursorDots: React.FC = () => {
     const handleMouseMove = (e: MouseEvent) => {
       mouse.current.x = e.clientX;
       mouse.current.y = e.clientY;
-      // Add a new dot at the cursor
       dots.current.push({
         x: e.clientX,
         y: e.clientY,
@@ -44,25 +41,23 @@ const CursorDots: React.FC = () => {
     window.addEventListener('mousemove', handleMouseMove);
     window.addEventListener('resize', handleResize);
 
-    function animate() {
+    const animate = () => {
       ctx.clearRect(0, 0, width, height);
-      // Draw and update dots
-      dots.current.forEach((dot, i) => {
+      dots.current.forEach(dot => {
         ctx.beginPath();
         ctx.arc(dot.x, dot.y, 8 * dot.life, 0, Math.PI * 2);
         ctx.fillStyle = dot.color;
         ctx.globalAlpha = dot.life * 0.7;
         ctx.fill();
         ctx.globalAlpha = 1;
-        // Animate dot
         dot.life -= 0.02;
         dot.x += (Math.random() - 0.5) * 1.5;
         dot.y += (Math.random() - 0.5) * 1.5;
       });
-      // Remove faded dots
       dots.current = dots.current.filter(dot => dot.life > 0);
       requestAnimationFrame(animate);
-    }
+    };
+
     animate();
 
     return () => {
@@ -94,7 +89,6 @@ const HeroSection = () => {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Colorful Cursor Dots */}
       <CursorDots />
 
       {/* Animated Background */}
@@ -104,63 +98,39 @@ const HeroSection = () => {
         <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
       </div>
 
-      {/* Main Content: Name left, Profile pic right */}
+      {/* Main Content */}
       <div className="container mx-auto px-4 relative z-10 flex flex-col md:flex-row items-center justify-between">
-        {/* Left: Name and Info */}
+        {/* Left Content */}
         <div className="flex-1 flex flex-col items-start text-left">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 animate-fade-in animation-delay-500 leading-tight">
             <span>Nadeera</span>
             <br />
-            <span
-              className="bg-gradient-to-r from-purple-400 via-pink-500 to-purple-400 bg-clip-text text-transparent"
-              style={{ display: "inline-block", marginLeft: "4cm" }}
-            >
+            <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-purple-400 bg-clip-text text-transparent" style={{ display: "inline-block", marginLeft: "4cm" }}>
               Withana
             </span>
           </h1>
 
-          
-
-<h2 className="text-xl md:text-2xl lg:text-3xl text-gray-200 mb-8 font-semibold">
-  <Typewriter
-    words={[
-      'Aspiring Data Engineer',
-      'Data Analyst',
-      'IT Undergraduate at SLIIT',
-      'Web Developer'
-    ]}
-    loop={0} // 0 = Infinite
-    cursor
-    cursorStyle="|"
-    typeSpeed={50}
-    deleteSpeed={40}
-    delaySpeed={1500}
-  />
-</h2>
-
+          <h2 className="text-xl md:text-2xl lg:text-3xl text-gray-200 mb-8 font-semibold">
+            <Typewriter
+              words={[
+                'Aspiring Data Engineer',
+                'Data Analyst',
+                'IT Undergraduate at SLIIT',
+                'Web Developer',
+              ]}
+              loop={0}
+              cursor
+              cursorStyle="|"
+              typeSpeed={50}
+              deleteSpeed={40}
+              delaySpeed={1500}
+            />
+          </h2>
 
           <p className="text-lg text-dark bg-gray-500-400 mb-12 max-w-2xl animate-fade-in animation-delay-1500">
-            Passionate about transforming data into actionable insights and building intelligent solutions 
-            that make a difference in the world.
+            Passionate about transforming data into actionable insights and building intelligent solutions
+            that make a difference in the world. Actively seeking an internship to apply my skills and gain hands-on industry experience.
           </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in animation-delay-2000">
-            <button className="px-8 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 text-white rounded-full font-semibold hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 transform hover:scale-105">
-              <a
-                href="/MY CV.pdf"
-                download
-                className="btn btn-primary"
-              >
-                Download CV
-              </a>
-            </button>
-            <button
-              onClick={() => window.location.href = "mailto:nadeerawithana2k20@gmail.com"}
-              className="px-8 py-3 border border-gray-600 text-white rounded-full font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
-            >
-              Contact Me
-            </button>
-          </div>
         </div>
 
         {/* Right: Profile Picture */}
@@ -175,46 +145,44 @@ const HeroSection = () => {
         </div>
       </div>
 
+      {/* Centered Buttons */}
+      <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 z-10 flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in animation-delay-2000">
+        <a
+          href="/MY CV.pdf"
+          download
+          className="px-8 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 text-white rounded-full font-semibold hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 transform hover:scale-105"
+        >
+          Download CV
+        </a>
+        <button
+          onClick={() => window.location.href = "mailto:nadeerawithana2k20@gmail.com"}
+          className="px-8 py-3 border border-gray-600 text-white rounded-full font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
+        >
+          Contact Me
+        </button>
+      </div>
+
+      {/* Arrow Scroll Down */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <ArrowDown 
+        <ArrowDown
           className="text-gray-400 cursor-pointer hover:text-white transition-colors duration-200"
           size={24}
           onClick={scrollToAbout}
         />
       </div>
 
-      {/* Social Media Links */}
+      {/* Social Media */}
       <div className="fixed top-1/2 right-6 z-30 -translate-y-1/2 flex flex-col items-center space-y-4">
-        <a
-          href="https://github.com/Nadee07"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-12 h-12 rounded-full flex items-center justify-center bg-slate-800 hover:bg-gray-900 transition-all duration-300 shadow-lg"
-        >
+        <a href="https://github.com/Nadee07" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full flex items-center justify-center bg-slate-800 hover:bg-gray-900 transition-all duration-300 shadow-lg">
           <Github className="text-white" size={28} />
         </a>
-        <a
-          href="https://www.linkedin.com/in/nadeera-withana-966a74347/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-12 h-12 rounded-full flex items-center justify-center bg-blue-600 hover:bg-blue-700 transition-all duration-300 shadow-lg"
-        >
+        <a href="https://www.linkedin.com/in/nadeera-withana-966a74347/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full flex items-center justify-center bg-blue-600 hover:bg-blue-700 transition-all duration-300 shadow-lg">
           <Linkedin className="text-white" size={28} />
         </a>
-        <a
-          href="https://www.instagram.com/n_a_d_e_e_07/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-12 h-12 rounded-full flex items-center justify-center bg-gradient-to-tr from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 transition-all duration-300 shadow-lg"
-        >
+        <a href="https://www.instagram.com/n_a_d_e_e_07/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full flex items-center justify-center bg-gradient-to-tr from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 transition-all duration-300 shadow-lg">
           <Instagram className="text-white" size={28} />
         </a>
-        <a
-          href="https://www.facebook.com/nadee.withana.2025/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-12 h-12 rounded-full flex items-center justify-center bg-blue-500 hover:bg-blue-700 transition-all duration-300 shadow-lg"
-        >
+        <a href="https://www.facebook.com/nadee.withana.2025/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full flex items-center justify-center bg-blue-500 hover:bg-blue-700 transition-all duration-300 shadow-lg">
           <Facebook className="text-white" size={28} />
         </a>
       </div>
