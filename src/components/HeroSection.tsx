@@ -105,7 +105,7 @@ const HeroSection = () => {
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray mb-4 animate-fade-in animation-delay-500 leading-tight">
             <span>Nadeera</span>
             <br />
-            <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-purple-400 bg-clip-text text-transparent" style={{ display: "inline-block", marginLeft: "4cm" }}>
+            <span className="bg-gradient-to-r from-purple-500 via-cyan-600 to-purple-400 bg-clip-text text-transparent" style={{ display: "inline-block", marginLeft: "4cm" }}>
               Withana
             </span>
           </h1>
@@ -160,7 +160,7 @@ const HeroSection = () => {
         </a>
         <button
           onClick={() => window.location.href = "mailto:nadeerawithana2k20@gmail.com"}
-          className="px-8 py-3 border border-gray-600 text-white rounded-full font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
+          className="px-8 py-3 border border-gray-600 text-black rounded-full font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
         >
           Contact Me
         </button>
