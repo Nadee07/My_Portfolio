@@ -1,10 +1,72 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const AboutSection = () => {
+  useEffect(() => {
+    // Create snow container
+    const snowContainer = document.createElement('div');
+    snowContainer.id = 'snow-container';
+    snowContainer.style.position = 'fixed';
+    snowContainer.style.top = '0';
+    snowContainer.style.left = '0';
+    snowContainer.style.width = '100vw';
+    snowContainer.style.height = '100vh';
+    snowContainer.style.pointerEvents = 'none';
+    snowContainer.style.zIndex = '10';
+
+    // Create snowflakes
+    for (let i = 0; i < 60; i++) {
+      const snowflake = document.createElement('div');
+      snowflake.className = 'snow-dot';
+      snowflake.style.position = 'absolute';
+      snowflake.style.top = `${Math.random() * 100}vh`;
+      snowflake.style.left = `${Math.random() * 100}vw`;
+      snowflake.style.width = `${Math.random() * 2 + 2}px`;
+      snowflake.style.height = snowflake.style.width;
+      snowflake.style.borderRadius = '50%';
+      snowflake.style.background = 'rgba(255,255,255,0.85)';
+      snowflake.style.opacity = `${Math.random() * 0.7 + 0.3}`;
+      snowflake.style.filter = 'blur(0.5px)';
+      snowflake.style.transition = 'none';
+      snowContainer.appendChild(snowflake);
+    }
+
+    document.body.appendChild(snowContainer);
+
+    // Animate snowflakes
+    const snowflakes = Array.from(document.getElementsByClassName('snow-dot'));
+    let animationFrame: number;
+    function animate() {
+      snowflakes.forEach((flake: any) => {
+        let top = parseFloat(flake.style.top);
+        let left = parseFloat(flake.style.left);
+        let speed = parseFloat(flake.dataset?.speed) || (Math.random() * 0.5 + 0.3);
+        top += speed;
+        left += Math.sin(Date.now() / 1000 + top) * 0.1;
+        if (top > window.innerHeight) {
+          top = -5;
+          left = Math.random() * window.innerWidth;
+        }
+        flake.style.top = `${top}px`;
+        flake.style.left = `${left}px`;
+      });
+      animationFrame = requestAnimationFrame(animate);
+    }
+    animate();
+
+    // Cleanup
+    return () => {
+      cancelAnimationFrame(animationFrame);
+      if (snowContainer.parentNode) {
+        snowContainer.parentNode.removeChild(snowContainer);
+      }
+    };
+  }, []);
+
   return (
     <section
       id="about"
-      className="py-20 px-4 bg-purple-50 text-gray-900 dark:bg-slate-900 dark:text-gray-100 transition-colors duration-300"
+      className="relative py-20 px-4 bg-purple-50 text-gray-900 dark:bg-slate-900 dark:text-gray-100 transition-colors duration-300 overflow-hidden"
+      style={{ zIndex: 0 }}
     >
       <div className="container mx-auto max-w-4xl">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
@@ -33,7 +95,7 @@ const AboutSection = () => {
             <div className="grid grid-cols-2 gap-4 pt-6">
               <div className="bg-slate-800/30 backdrop-blur-sm rounded-lg p-4 border border-slate-700/50">
                 <h4 className="text-cyan-600 font-semibold mb-2">University</h4>
-                <p>SLIIT</p>
+                <p>🎓SLIIT</p>
               </div>
               <div className="bg-slate-800/30 backdrop-blur-sm rounded-lg p-4 border border-slate-700/50">
                 <h4 className="text-cyan-600 font-semibold mb-2">Degree</h4>
