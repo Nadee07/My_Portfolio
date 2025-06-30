@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Github, ArrowRight } from 'lucide-react';
 
@@ -13,7 +12,7 @@ const ProjectsSection = () => {
       demo: "#"
     },
     {
-      title: "Vehicle Service and Fuel Station Maanagement System",
+      title: "Vehicle Service and Fuel Station Management System",
       description: "Developed a web-based vehicle service and fuel station management system. This application allows users to book services, manage fuel transactions, and track vehicle maintenance history.",
       image: "https://www.trinetrawireless.com/wp-content/uploads/2017/12/Fuel-Management-Solutions.jpg",
       tech: ["Java", "Bootsrap CSS", "OOP"],
@@ -48,17 +47,17 @@ const ProjectsSection = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 px-4 bg-slate-900/50">
+    <section id="projects" className="py-20 px-4 bg-white dark:bg-slate-900/80 transition-colors duration-300">
       <div className="container mx-auto max-w-6xl">
-        <h2 className="text-4xl md:text-5xl font-bold text-center text-white mb-16">
+        <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 dark:text-white mb-16">
           Featured <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Projects</span>
         </h2>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <div 
               key={index}
-              className="group bg-slate-800/30 backdrop-blur-sm rounded-xl overflow-hidden border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300 hover:transform hover:scale-105"
+              className="group bg-gray-100 dark:bg-slate-800/30 backdrop-blur-sm rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700/50 hover:border-blue-700/90 transition-all duration-300 hover:transform hover:scale-105"
             >
               <div className="relative overflow-hidden">
                 <img 
@@ -66,15 +65,15 @@ const ProjectsSection = () => {
                   alt={project.title}
                   className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-white/80 dark:from-slate-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               
               <div className="p-6">
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors duration-300">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-purple-600 transition-colors duration-300">
                   {project.title}
                 </h3>
                 
-                <p className="text-gray-300 text-sm mb-4 leading-relaxed">
+                <p className="text-gray-700 dark:text-gray-300 text-m mb-4 leading-relaxed">
                   {project.description}
                 </p>
                 
@@ -82,7 +81,7 @@ const ProjectsSection = () => {
                   {project.tech.map((tech, techIndex) => (
                     <span 
                       key={techIndex}
-                      className="px-2 py-1 bg-slate-700/50 text-gray-300 rounded text-xs"
+                      className="px-2 py-1 bg-gray-200 dark:bg-slate-700/50 text-gray-800 dark:text-gray-300 rounded text-sm"
                     >
                       {tech}
                     </span>
@@ -92,15 +91,15 @@ const ProjectsSection = () => {
                 <div className="flex justify-between items-center">
                   <a 
                     href={project.github}
-                    className="flex items-center text-gray-400 hover:text-white transition-colors duration-200"
+                    className="flex items-center text-cyan-600 dark:text-cyan-400 hover:text-purple-700 dark:hover:text-white transition-colors duration-200"
                   >
-                    <Github size={16} className="mr-1" />
+                    <Github size={18} className="mr-1" />
                     <span className="text-sm">Code</span>
                   </a>
                   
                   <a 
                     href={project.demo}
-                    className="flex items-center text-purple-400 hover:text-purple-300 transition-colors duration-200"
+                    className="flex items-center text-purple-700 dark:text-purple-400 hover:text-purple-900 dark:hover:text-purple-300 transition-colors duration-200"
                   >
                     <span className="text-sm mr-1">Live Demo</span>
                     <ArrowRight size={16} />
@@ -112,9 +111,14 @@ const ProjectsSection = () => {
         </div>
 
         <div className="text-center mt-12">
-          <button className="px-8 py-3 border border-gray-600 text-white rounded-full font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+          <a
+            href="https://github.com/Nadee07"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-8 py-3 border border-gray-400 dark:border-gray-600 text-gray-900 dark:text-white rounded-full font-semibold hover:bg-purple-100 dark:hover:bg-white/10 hover:text-purple-900 dark:hover:text-white transition-all duration-300"
+          >
             View All Projects
-          </button>
+          </a>
         </div>
       </div>
     </section>
