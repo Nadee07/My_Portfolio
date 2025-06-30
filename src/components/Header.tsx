@@ -81,7 +81,7 @@ const Header = () => {
                   ${
                     activeSection === item.href
                       ? 'bg-black text-white dark:bg-blue-900 dark:text-white font-semibold'
-                      : 'text-black dark:text-gray hover:text-slate-900 dark:hover:text-white'
+                      : 'text-white dark:text-gray hover:text-slate-900 dark:hover:text-white'
                   }
                 `}
               >
