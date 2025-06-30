@@ -90,7 +90,7 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-[#0d1321] text-white dark:bg-white dark:text-gray-900"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-white text-gray-900 dark:bg-slate-900 dark:text-gray-100"
     >
       <CursorDots />
 
