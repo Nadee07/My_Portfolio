@@ -32,7 +32,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="https://www.linkedin.com/in/nadeera-withana/"
+                  href="https://www.linkedin.com/in/nadeera-withana-966a74347/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center text-gray-700 dark:text-gray-300 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors"
@@ -84,7 +84,7 @@ const Footer = () => {
             </div>
             <div className="mb-1">
               <span className="block text-gray-700 dark:text-gray-300 text-sm font-medium">
-                📍 Matara, Sri Lanka
+                📍 Colombo, Sri Lanka
               </span>
             </div>
             <div>
