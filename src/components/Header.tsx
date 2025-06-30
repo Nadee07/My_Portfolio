@@ -76,14 +76,14 @@ const Header = () => {
                 className={`relative group px-2 py-1 rounded transition-colors duration-200
                   ${
                     activeSection === item.href
-                      ? 'bg-purple-100 text-black dark:bg-blue-900 dark:text-white font-semibold'
+                      ? 'bg-gray-500 text-black dark:bg-blue-950 dark:text-white font-semibold'
                       : 'text-black dark:text-gray-300 hover:text-slate-900 dark:hover:text-white'
                   }
                 `}
               >
                 {item.name}
                 <span
-                  className={`absolute -bottom-1 left-0 h-0.5 bg-purple-200 transition-all duration-300
+                  className={`absolute -bottom-1 left-0 h-0.5 bg-gray-500 transition-all duration-300
                     ${activeSection === item.href ? 'w-full' : 'w-0 group-hover:w-full'}
                   `}
                 ></span>
