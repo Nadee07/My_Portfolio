@@ -59,7 +59,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-20 px-4 relative">
+    <section id="contact" className="py-20 px-4 bg-purple-50 dark:bg-slate-900/80 transition-colors duration-300">
       <div className="container mx-auto max-w-4xl">
         <h2 className="text-4xl md:text-5xl font-bold text-center text-gray mb-16">
           Get In <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Touch</span>
