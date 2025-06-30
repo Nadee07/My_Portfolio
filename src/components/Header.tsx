@@ -63,11 +63,11 @@ const Header = () => {
     >
       <nav className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
-          <div className="text-xl font-bold">
+          <div className="text-2xl font-bold">
             <span
               className="bg-gradient-to-r from-blue-600 via-purple-400 to-cyan-400 bg-clip-text text-transparent"
             >
-              NW
+              NKW
             </span>
           </div>
           
