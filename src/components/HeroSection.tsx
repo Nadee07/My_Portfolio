@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { ArrowDown, Github, Linkedin, Instagram, Facebook } from 'lucide-react';
+import { ArrowDown, Github, Linkedin, Instagram, Facebook, Download, Mail } from 'lucide-react';
 import { Typewriter } from 'react-simple-typewriter';
 import { motion } from 'framer-motion';
 
@@ -90,7 +90,7 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-white text-gray-900 dark:bg-slate-900 dark:text-gray-100"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-[#0d1321] text-white dark:bg-white dark:text-gray-900"
     >
       <CursorDots />
 
@@ -107,13 +107,13 @@ const HeroSection = () => {
         <div className="flex-1 flex flex-col items-start text-left">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 animate-fade-in animation-delay-500 leading-tight">
             <span
-              className="bg-gradient-to-r from-blue-900 via-blue-600 to-blue-300 bg-clip-text text-transparent dark:from-blue-300 dark:via-purple-400 dark:to-blue-700"
+              className="bg-gradient-to-r from-blue-900 via-blue-700 to-blue-400 bg-clip-text text-transparent dark:from-blue-300 dark:via-purple-400 dark:to-blue-700"
             >
               Nadeera
             </span>
             <br />
             <span
-              className="bg-gradient-to-r from-blue-900 via-blue-600 to-blue-300 bg-clip-text text-transparent dark:from-blue-300 dark:via-purple-400 dark:to-blue-700"
+              className="bg-gradient-to-r from-blue-900 via-blue-700 to-blue-400 bg-clip-text text-transparent dark:from-blue-300 dark:via-purple-400 dark:to-blue-700"
               style={{ display: "inline-block", marginLeft: "4cm" }}
             >
               Withana
@@ -163,14 +163,16 @@ const HeroSection = () => {
         <a
           href="/MY CV.pdf"
           download
-          className="px-8 py-3 bg-black text-white dark:bg-white dark:text-black rounded-full font-semibold hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105"
+          className="px-8 py-3 bg-black text-white dark:bg-white dark:text-black rounded-full font-semibold flex items-center gap-2 hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105"
         >
+          <Download size={20} />
           Download CV
         </a>
         <button
           onClick={() => window.location.href = "mailto:nadeerawithana2k20@gmail.com"}
-          className="px-8 py-3 border border-gray-600 text-gray-900 rounded-full font-semibold hover:bg-white hover:text-black dark:text-gray-100 dark:border-gray-400 dark:hover:bg-slate-800 transition-all duration-300"
+          className="px-8 py-3 border border-gray-600 text-gray-900 rounded-full font-semibold flex items-center gap-2 hover:bg-white hover:text-black dark:text-gray-100 dark:border-gray-400 dark:hover:bg-black dark:hover:text-white transition-all duration-300"
         >
+          <Mail size={20} />
           Contact Me
         </button>
       </div>
