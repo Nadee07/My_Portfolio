@@ -80,14 +80,14 @@ const Header = () => {
                 className={`relative group px-2 py-1 rounded transition-colors duration-200
                   ${
                     activeSection === item.href
-                      ? 'bg-purple-100 text-purple-700 dark:bg-purple-800 dark:text-white font-semibold'
+                      ? 'bg-black text-white dark:bg-gray dark:text-white font-semibold'
                       : 'text-black dark:text-gray-300 hover:text-slate-900 dark:hover:text-white'
                   }
                 `}
               >
                 {item.name}
                 <span
-                  className={`absolute -bottom-1 left-0 h-0.5 bg-purple-400 transition-all duration-300
+                  className={`absolute -bottom-1 left-0 h-0.5 bg-purple-100 transition-all duration-300
                     ${activeSection === item.href ? 'w-full' : 'w-0 group-hover:w-full'}
                   `}
                 ></span>
