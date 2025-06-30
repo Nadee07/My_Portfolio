@@ -80,8 +80,8 @@ const Header = () => {
                 className={`relative group px-2 py-1 rounded transition-colors duration-200
                   ${
                     activeSection === item.href
-                      ? 'bg-black text-white dark:bg-blue-900 dark:text-white font-semibold'
-                      : 'text-white dark:text-gray hover:text-slate-900 dark:hover:text-white'
+                      ? 'bg-purple-100 text-purple-700 dark:bg-purple-800 dark:text-white font-semibold'
+                      : 'text-black dark:text-gray-300 hover:text-slate-900 dark:hover:text-white'
                   }
                 `}
               >
