@@ -76,7 +76,7 @@ const Header = () => {
                 className={`relative group px-2 py-1 rounded transition-colors duration-200
                   ${
                     activeSection === item.href
-                      ? 'bg-gray-500 text-black dark:bg-blue-950 dark:text-white font-semibold'
+                      ? 'bg-gray-500 text-white dark:bg-blue-950 dark:text-white font-semibold'
                       : 'text-black dark:text-gray-300 hover:text-slate-900 dark:hover:text-white'
                   }
                 `}
