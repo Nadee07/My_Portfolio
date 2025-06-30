@@ -5,12 +5,28 @@ import ThemeToggle from './ThemeToggle';
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState<string>('#home');
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+
+      // Highlight active section
+      const sections = ['#home', '#about', '#education', '#skills', '#projects', '#contact'];
+      let found = '#home';
+      for (const id of sections) {
+        const el = document.querySelector(id);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= 80 && rect.bottom > 80) {
+            found = id;
+            break;
+          }
+        }
+      }
+      setActiveSection(found);
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -27,12 +43,13 @@ const Header = () => {
     const element = document.querySelector(href);
     element?.scrollIntoView({ behavior: 'smooth' });
     setIsMobileMenuOpen(false);
+    setActiveSection(href);
   };
 
   return (
-    <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+    <header className={`sticky top-0 w-full z-50 transition-all duration-300 ${
       isScrolled
-        ? 'bg-purple dark:bg-slate-900 backdrop-blur-lg border-b border-slate-700/50'
+        ? 'bg-[#0d1321] dark:bg-white dark:text-gray-900 backdrop-blur-lg border-b border-slate-700/50'
         : 'bg-transparent'
     }`}>
       <nav className="container mx-auto px-4 py-4">
@@ -47,10 +64,20 @@ const Header = () => {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="text-black dark:text-gray-300 hover:text-slate-900 dark:hover:text-white transition-colors duration-200 relative group"
+                className={`relative group px-4 py-2 rounded transition-colors duration-200 font-medium
+                  ${
+                    activeSection === item.href
+                      ? 'bg-white text-[#0d1321] dark:bg-[#0d1321] dark:text-white shadow'
+                      : 'text-black dark:text-gray-300 hover:bg-slate-200 dark:hover:bg-slate-800 hover:text-[#0d1321] dark:hover:text-white'
+                  }
+                `}
               >
                 {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-400 transition-all duration-300 group-hover:w-full"></span>
+                <span
+                  className={`absolute -bottom-1 left-0 h-0.5 bg-purple-400 transition-all duration-300
+                    ${activeSection === item.href ? 'w-full' : 'w-0 group-hover:w-full'}
+                  `}
+                ></span>
               </button>
             ))}
             <ThemeToggle />
@@ -75,7 +102,13 @@ const Header = () => {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="block w-full text-left py-2 text-slate-700 dark:text-gray-300 hover:text-slate-900 dark:hover:text-white transition-colors duration-200"
+                className={`block w-full text-left py-2 px-2 rounded font-medium transition-colors duration-200
+                  ${
+                    activeSection === item.href
+                      ? 'bg-white text-[#0d1321] dark:bg-[#0d1321] dark:text-white shadow'
+                      : 'text-slate-700 dark:text-gray-300 hover:bg-slate-200 dark:hover:bg-slate-800 hover:text-[#0d1321] dark:hover:text-white'
+                  }
+                `}
               >
                 {item.name}
               </button>
