@@ -12,7 +12,7 @@ const ThemeToggle = () => {
       variant="ghost"
       size="icon"
       onClick={toggleTheme}
-      className="text-gray-300 hover:text-white transition-colors duration-200"
+      className="text-gray hover:text-white transition-colors duration-200"
     >
       {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
     </Button>
