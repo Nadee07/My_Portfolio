@@ -32,7 +32,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="https://www.linkedin.com/in/nadeera-withana-966a74347/"
+                  href="https://www.linkedin.com/in/nadeera-withana/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center text-gray-700 dark:text-gray-300 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors"
@@ -76,15 +76,15 @@ const Footer = () => {
           </div>
           {/* About/Brand */}
           <div>
-            <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Nadeera Withana</h4>
+            <h4 className="text-2xl font-semibold dark:text-bg-gradient-to-r from-blue-600 via-purple-400 to-cyan-400 bg-clip-text text-transparent mb-3 bg-gradient-to-r from-blue-600 via-purple-400 to-cyan-400 bg-clip-text text-transparent">Nadeera Withana</h4>
             <div className="mb-2">
-              <span className="block text-gray-600 dark:text-gray-400 text-m">
+              <span className="block text-gray-600 dark:text-gray-400 text-sm ">
                 Data Science undergraduate passionate about uncovering insights from data, building intelligent systems, and solving real-world problems using technology.
               </span>
             </div>
             <div className="mb-1">
               <span className="block text-gray-700 dark:text-gray-300 text-sm font-medium">
-                📍 Colombo, Sri Lanka
+                📍 Matara, Sri Lanka
               </span>
             </div>
             <div>
