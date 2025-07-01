@@ -88,7 +88,7 @@ const EducationSection = () => {
                       <li className="flex items-center gap-2">
                         Getting Started with DevOps <span className="font-bold">(Amazon Web Services, 2025)</span>
                         <a
-                          href="https://skillbuilder.aws/learn/R4B13K95YQ/getting-started-with-devops-on-aws/38NHHYRV1R"
+                          href="https://www.linkedin.com/posts/nadeera-withana-966a74347_devops-aws-cloudcomputing-activity-7341855836002000896-ivQe?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFbVP14BaHB_y7xw7c8fJ_oLnMFT915Lhrk"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="ml-1 text-cyan-600 dark:text-cyan-400 hover:text-cyan-800 dark:hover:text-cyan-300"
@@ -100,7 +100,7 @@ const EducationSection = () => {
                       <li className="flex items-center gap-2">
                         Fundamental of Machine Learning and Artificial Intelligence <span className="font-bold">(AWS , 2025)</span>
                         <a
-                          href="https://skillbuilder.aws/learn/16ASDUHF86/fundamentals-of-machine-learning-and-artificial-intelligence/M7JZCTA94N"
+                          href="https://www.linkedin.com/posts/nadeera-withana-966a74347_machinelearning-artificialintelligence-awstraining-activity-7342051109630341121-sQbn?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFbVP14BaHB_y7xw7c8fJ_oLnMFT915Lhrk"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="ml-1 text-cyan-600 dark:text-cyan-400 hover:text-cyan-800 dark:hover:text-cyan-300"
@@ -112,7 +112,7 @@ const EducationSection = () => {
                       <li className="flex items-center gap-2">
                         Amazon Aurora Getting Started <span className="font-bold">(Amazon Web Services, 2025)</span>
                         <a
-                          href="https://skillbuilder.aws/learn/W95CCPKD1Y/amazon-aurora-getting-started/PT4AMCE9XC"
+                          href="https://www.linkedin.com/posts/nadeera-withana-966a74347_amazonaurora-aws-cloudcomputing-activity-7341852979903299640-1iM2?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFbVP14BaHB_y7xw7c8fJ_oLnMFT915Lhrk"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="ml-1 text-cyan-600 dark:text-cyan-400 hover:text-cyan-800 dark:hover:text-cyan-300"
