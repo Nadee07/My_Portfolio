@@ -20,7 +20,7 @@ const EducationSection = () => {
             {/* Current Education */}
             <div className="relative md:ml-16">
               <div className="absolute -left-20 top-6 w-4 h-4 bg-cyan-400 rounded-full border-4 border-slate-900 hidden md:block"></div>
-              <div className="bg-white dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700 rounded-xl p-6 transition-colors duration-300">
+              <div className="bg-white dark:bg-slate-800/90 border border-slate-200 dark:border-purple-400 rounded-xl p-6 hover:border-purple-400 transition-all duration-300 hover:scale-105">
                 <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 dark:text-white">Sri Lanka Institute of Information Technology (SLIIT) </h3> 
@@ -44,14 +44,14 @@ const EducationSection = () => {
             {/* Previous Education */}
             <div className="relative md:ml-16">
               <div className="absolute -left-20 top-6 w-4 h-4 bg-cyan-400 rounded-full border-4 border-slate-900 hidden md:block"></div>
-              <div className="bg-white dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700 rounded-xl p-6 transition-colors duration-300">
+              <div className="bg-white dark:bg-slate-800/90 border border-slate-200 dark:border-purple-400 rounded-xl p-6 hover:border-purple-400 transition-all duration-300 hover:scale-105">
                 <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white">Sujathaa Vidyalaya - Matara</h3>
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white">Sujatha Vidyalaya - Matara</h3>
                     <p className="text-purple-700 dark:text-purple-300 font-semibold">Advanced Level (2021) </p>
                     <p className="text-purple-700 dark:text-purple-300 font-semibold">Biological Sceience Stream </p>
                   </div>
-                  <span className="text-purple-600 dark:text-purple-400 font-semibold mt-2 md:mt-0">2010 - 2022</span>
+                  <span className="text-purple-600 dark:text-cyan-400 font-semibold mt-2 md:mt-0">2010 - 2022</span>
                 </div>
                 <p className="text-gray-700 dark:text-gray-200 mb-4">
                   Completed Advanced Level with subjects in Physics, Chemistry and Biology.
@@ -68,7 +68,7 @@ const EducationSection = () => {
             {/* Courses Category */}
             <div className="relative md:ml-16">
               <div className="absolute -left-20 top-6 w-4 h-4 bg-cyan-400 rounded-full border-4 border-slate-900 hidden md:block"></div>
-              <div className="bg-white dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700 rounded-xl p-6 transition-colors duration-300">
+              <div className="bg-white dark:bg-slate-800/90 border border-slate-200 dark:border-purple-400 rounded-xl p-6 hover:border-purple-400 transition-all duration-300 hover:scale-105">
                 <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 dark:text-white">Certificate Courses</h3>
