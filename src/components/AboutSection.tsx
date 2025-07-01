@@ -79,6 +79,9 @@ const AboutSection = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left: About Me Text and Details */}
           <div className="space-y-6">
+             <p className="text-2xl leading-relaxed ">
+               Undergraduate student at SLIIT
+            </p>
             <p className="text-lg leading-relaxed">
               I'm a third-year undergraduate student at SLIIT, pursuing a Bachelor's degree in Information Technology 
               with a specialization in Data Science. My journey in tech began with a curiosity about how data can 
@@ -92,22 +95,22 @@ const AboutSection = () => {
               interested in the intersection of AI and healthcare.
             </p>
 
-            <div className="grid grid-cols-2 gap-4 pt-6">
-              <div className="bg-slate-800/30 backdrop-blur-sm rounded-lg p-4 border border-slate-700/50">
+            <div className="grid m:grid-cols-2 gap-4 pt-6">
+              <div className="bg-slate-800/30 backdrop-blur-sm rounded-lg p-4 border border-slate-200 hover:border-purple-400 transition-all duration-300 hover:scale-105">
                 <h4 className="text-cyan-600 font-semibold mb-2">University</h4>
                 <p>🎓SLIIT</p>
               </div>
-              <div className="bg-slate-800/30 backdrop-blur-sm rounded-lg p-4 border border-slate-700/50">
+              <div className="bg-slate-800/30 backdrop-blur-sm rounded-lg p-4 border border-slate-200 hover:border-purple-400 transition-all duration-300 hover:scale-105">
                 <h4 className="text-cyan-600 font-semibold mb-2">Degree</h4>
                 <p>BSc (Hons) in Information Technology </p>
               </div>
-              <div className="bg-slate-800/30 backdrop-blur-sm rounded-lg p-4 border border-slate-700/50">
-                <h4 className="text-cyan-600 font-semibold mb-2">Year</h4>
-                <p>3rd Year</p>
-              </div>
-              <div className="bg-slate-800/30 backdrop-blur-sm rounded-lg p-4 border border-slate-700/50">
+              <div className="bg-slate-800/30 backdrop-blur-sm rounded-lg p-4 border border-slate-200 hover:border-purple-400 transition-all duration-300 hover:scale-105">
                 <h4 className="text-cyan-600 font-semibold mb-2">Specializing</h4>
                 <p>Data Science</p>
+              </div>
+              <div className="bg-slate-800/30 backdrop-blur-sm rounded-lg p-4 border border-slate-200 hover:border-purple-400 transition-all duration-300 hover:scale-105">
+                <h4 className="text-cyan-600 font-semibold mb-2">Year</h4>
+                <p>3rd Year</p>
               </div>
             </div>
           </div>
@@ -121,7 +124,7 @@ const AboutSection = () => {
               className="w-full h-auto rounded-2xl object-contain shadow-lg border-4 border-gray-500 max-w-md"
             />
             {/* My Interests */}
-            <div className="w-full bg-gradient-to-r from-purple-500/20 to-cyan-500/20 rounded-2xl p-8 backdrop-blur-sm border border-slate-700/50">
+            <div className="w-full bg-gradient-to-r from-purple-500/20 to-cyan-500/20 rounded-2xl p-8 backdrop-blur-sm border border-slate-700/50 hover:border-purple-400 transition-all duration-300 hover:scale-105">
               <h3 className="text-2xl font-bold text-cyan-600 mb-6">My Interests</h3>
               <ul className="space-y-4">
                 <li className="flex items-center">
